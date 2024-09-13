@@ -3,117 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Ping Pong</title>
+    <title>Save the Date: Calvin & Iris</title>
+    <!-- Google Fonts für elegante Schrift -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        canvas {
-            background: black;
-            display: block;
-            margin: 0 auto;
-        }
         body {
+            font-family: 'Playfair Display', serif;
+            background-color: #faf3e0; /* Sanfte, neutrale Hintergrundfarbe */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #faf3e0; /* Cremiger Hintergrund, der an Hochzeitseinladungen erinnert */
+            padding: 20px;
             text-align: center;
-            color: white;
-            font-family: Arial, sans-serif;
+            border: 2px solid #FFD700; /* Goldene Umrandung */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Leichter Schatten für eleganten Effekt */
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: #FFD700; /* Goldene Schrift für elegante Akzente */
+            margin: 0;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 1.4rem;
+            margin: 20px 0;
+            color: #555;
+        }
+        .date {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700; /* Goldene Akzente */
+            margin-bottom: 30px;
+        }
+        .rsvp-button {
+            text-decoration: none;
+            background-color: #FFD700;
+            color: #333;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .rsvp-button:hover {
+            background-color: #f7c500;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #888;
         }
     </style>
 </head>
 <body>
-    <h1>Online Ping Pong</h1>
-    <canvas id="pongCanvas" width="600" height="400"></canvas>
+    <div class="container">
+        <h1>Save the Date!</h1>
+        <h2>Calvin & Iris heiraten!</h2>
+        <p>Wir laden euch herzlich ein, diesen besonderen Moment mit uns zu feiern!</p>
+        <div class="date">Datum: 15. Juni 2024</div>
+        <p>Eine formelle Einladung und weitere Informationen folgen bald.</p>
+        <a href="mailto:email@example.com" class="rsvp-button">RSVP per E-Mail</a>
+    </div>
 
-    <script>
-        const canvas = document.getElementById('pongCanvas');
-        const ctx = canvas.getContext('2d');
-
-        // Ball variables
-        let ballX = canvas.width / 2;
-        let ballY = canvas.height / 2;
-        let ballRadius = 10;
-        let ballSpeedX = 2;
-        let ballSpeedY = 2;
-
-        // Paddle variables
-        const paddleWidth = 10;
-        const paddleHeight = 75;
-        const paddleSpeed = 5;
-
-        // Left paddle
-        let leftPaddleY = (canvas.height - paddleHeight) / 2;
-
-        // Right paddle (AI)
-        let rightPaddleY = (canvas.height - paddleHeight) / 2;
-
-        // Input handling
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'ArrowUp' && leftPaddleY > 0) {
-                leftPaddleY -= paddleSpeed;
-            }
-            if (event.key === 'ArrowDown' && leftPaddleY < canvas.height - paddleHeight) {
-                leftPaddleY += paddleSpeed;
-            }
-        });
-
-        // Draw the game
-        function draw() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw ball
-            ctx.beginPath();
-            ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
-            ctx.fillStyle = 'white';
-            ctx.fill();
-            ctx.closePath();
-
-            // Draw left paddle
-            ctx.fillRect(10, leftPaddleY, paddleWidth, paddleHeight);
-
-            // Draw right paddle
-            ctx.fillRect(canvas.width - paddleWidth - 10, rightPaddleY, paddleWidth, paddleHeight);
-
-            // Move the ball
-            ballX += ballSpeedX;
-            ballY += ballSpeedY;
-
-            // Ball collision with top/bottom walls
-            if (ballY + ballRadius > canvas.height || ballY - ballRadius < 0) {
-                ballSpeedY = -ballSpeedY;
-            }
-
-            // Ball collision with paddles
-            if (
-                ballX - ballRadius < 20 &&
-                ballY > leftPaddleY &&
-                ballY < leftPaddleY + paddleHeight
-            ) {
-                ballSpeedX = -ballSpeedX;
-            }
-
-            if (
-                ballX + ballRadius > canvas.width - 20 &&
-                ballY > rightPaddleY &&
-                ballY < rightPaddleY + paddleHeight
-            ) {
-                ballSpeedX = -ballSpeedX;
-            }
-
-            // AI movement (simple follow the ball)
-            if (rightPaddleY + paddleHeight / 2 < ballY) {
-                rightPaddleY += paddleSpeed;
-            } else if (rightPaddleY + paddleHeight / 2 > ballY) {
-                rightPaddleY -= paddleSpeed;
-            }
-
-            // Reset ball if it goes off-screen
-            if (ballX + ballRadius < 0 || ballX - ballRadius > canvas.width) {
-                ballX = canvas.width / 2;
-                ballY = canvas.height / 2;
-                ballSpeedX = -ballSpeedX;
-            }
-
-            requestAnimationFrame(draw);
-        }
-
-        draw();
-    </script>
+    <footer>&copy; 2024 Calvin & Iris Hochzeit</footer>
 </body>
 </html>
