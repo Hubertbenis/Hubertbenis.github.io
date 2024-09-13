@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +49,7 @@
             color: #FFD700; /* Goldene Akzente */
             margin-bottom: 30px;
         }
-        .rsvp-button {
+        .calendar-button {
             text-decoration: none;
             background-color: #FFD700;
             color: #333;
@@ -60,7 +59,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
-        .rsvp-button:hover {
+        .calendar-button:hover {
             background-color: #f7c500;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
@@ -77,11 +76,12 @@
         <h1>Save the Date!</h1>
         <h2>Calvin & Iris heiraten!</h2>
         <p>Wir laden euch herzlich ein, diesen besonderen Moment mit uns zu feiern!</p>
-        <div class="date">Datum: 15. Juni 2024</div>
+        <div class="date">Datum: 06. September 2025</div>
         <p>Eine formelle Einladung und weitere Informationen folgen bald.</p>
-        <a href="mailto:email@example.com" class="rsvp-button">RSVP per E-Mail</a>
+        <!-- Button für Kalendereintrag -->
+        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0AUID:1234567890@example.com%0ADTSTAMP:20250906T080000Z%0AORGANIZER;CN=Calvin%20%26%20Iris:MAILTO:email@example.com%0ADTSTART:20250906T080000Z%0ADTEND:20250906T160000Z%0ASUMMARY:Calvin%20%26%20Iris%20Hochzeit%0ALOCATION:Berlin,%20Deutschland%0ADESCRIPTION:Save%20the%20Date%20f%C3%BCr%20die%20Hochzeit%20von%20Calvin%20%26%20Iris%20am%2006.%20September%202025.%0AEND:VEVENT%0AEND:VCALENDAR" class="calendar-button" download="calvin_iris_wedding.ics">Zum Kalender hinzufügen</a>
     </div>
 
-    <footer>&copy; 2024 Calvin & Iris Hochzeit</footer>
+    <footer>&copy; 2025 Calvin & Iris Hochzeit</footer>
 </body>
 </html>
