@@ -1,4 +1,5 @@
-<html lang="de">
+<!DOCTYPE html>
+<html lang="de"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +29,7 @@
             border: 10px solid transparent;
             position: relative;
             box-sizing: border-box;
+            z-index: 1; /* Hinzugefügt, um den Inhalt über die Pseudo-Elemente zu legen */
         }
 
         /* Floraler Rahmen mit Pseudo-Elementen */
@@ -39,8 +41,8 @@
             right: 0;
             bottom: 0;
             pointer-events: none;
-            z-index: -1;
             border-radius: 10px;
+            /* z-index: -1; */ /* Entfernt, damit die Pseudo-Elemente sichtbar sind */
         }
 
         .container::before {
