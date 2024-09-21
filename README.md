@@ -4,70 +4,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Save the Date: Calvin & Iris</title>
     <!-- Google Fonts für elegante Schrift -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Playfair Display', serif;
-            background-color: #ADD8E6; /* Babyblauer Hintergrund */
-            color: #00008B; /* Dunkelblaue Schrift */
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f4ef; /* Sanfter cremefarbener Hintergrund */
+            color: #2f2f2f; /* Dunkles Grau für Schrift */
             margin: 0;
             padding: 0;
         }
         .container {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #ADD8E6; /* Babyblauer Hintergrund */
-            padding: 22px;  /* Vergrößert um 10% */
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #ffffff; /* Weißer Hintergrund für den Inhalt */
             text-align: center;
-            border: 2.2px solid #00008B; /* Vergrößert um 10% */
-            box-shadow: 0 8.8px 17.6px rgba(0, 0, 0, 0.2); /* Vergrößert um 10% */
+            border: 10px solid #e0d8c3; /* Breiter Rahmen in hellem Goldton */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .container::before,
+        .container::after {
+            content: '';
+            position: absolute;
+            border: 1px solid #e0d8c3;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            top: 20px;
+            left: 20px;
+            pointer-events: none;
         }
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 4.4rem; /* Vergrößert um 10% */
-            color: #00008B;
+            font-size: 5rem;
+            color: #c69c6d; /* Goldener Farbton */
             margin: 0;
         }
         h2 {
-            font-size: 2.75rem; /* Vergrößert um 10% */
-            font-weight: bold;
-            color: #00008B;
-            margin: 22px 0; /* Vergrößert um 10% */
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2f2f2f;
+            margin: 20px 0;
         }
         p {
-            font-size: 1.54rem; /* Vergrößert um 10% */
-            margin: 22px 0; /* Vergrößert um 10% */
-            color: #00008B;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #4f4f4f;
         }
         .date {
-            font-size: 2.2rem; /* Vergrößert um 10% */
+            font-size: 2rem;
             font-weight: bold;
-            color: #00008B;
-            margin-bottom: 33px; /* Vergrößert um 10% */
+            color: #c69c6d; /* Goldener Farbton */
+            margin-bottom: 30px;
         }
         .calendar-button {
             text-decoration: none;
-            background-color: #00008B;
-            color: #ADD8E6;
-            padding: 16.5px 33px; /* Vergrößert um 10% */
-            font-size: 1.32rem; /* Vergrößert um 10% */
-            border-radius: 33px; /* Vergrößert um 10% */
-            box-shadow: 0 4.4px 8.8px rgba(0, 0, 0, 0.2); /* Vergrößert um 10% */
+            background-color: #c69c6d; /* Goldener Button */
+            color: #ffffff;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .calendar-button:hover {
-            background-color: #000070;
-            box-shadow: 0 6.6px 13.2px rgba(0, 0, 0, 0.3); /* Vergrößert um 10% */
+            background-color: #b2895b;
+            box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
         }
         footer {
-            position: absolute;
-            bottom: 22px; /* Vergrößert um 10% */
-            font-size: 0.99rem; /* Vergrößert um 10% */
-            color: #00008B;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #7f7f7f;
         }
     </style>
 </head>
