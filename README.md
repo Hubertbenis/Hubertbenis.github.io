@@ -21,52 +21,52 @@
             justify-content: center;
             align-items: center;
             background-color: #ADD8E6; /* Babyblauer Hintergrund */
-            padding: 20px;
+            padding: 22px;  /* Vergrößert um 10% */
             text-align: center;
-            border: 2px solid #00008B; /* Dunkelblaue Umrandung */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Leichter Schatten für eleganten Effekt */
+            border: 2.2px solid #00008B; /* Vergrößert um 10% */
+            box-shadow: 0 8.8px 17.6px rgba(0, 0, 0, 0.2); /* Vergrößert um 10% */
         }
         h1 {
             font-family: 'Great Vibes', cursive;
-            font-size: 4rem;
-            color: #00008B; /* Dunkelblaue Schrift für elegante Akzente */
+            font-size: 4.4rem; /* Vergrößert um 10% */
+            color: #00008B;
             margin: 0;
         }
         h2 {
-            font-size: 2.5rem;
+            font-size: 2.75rem; /* Vergrößert um 10% */
             font-weight: bold;
             color: #00008B;
-            margin: 20px 0;
+            margin: 22px 0; /* Vergrößert um 10% */
         }
         p {
-            font-size: 1.4rem;
-            margin: 20px 0;
+            font-size: 1.54rem; /* Vergrößert um 10% */
+            margin: 22px 0; /* Vergrößert um 10% */
             color: #00008B;
         }
         .date {
-            font-size: 2rem;
+            font-size: 2.2rem; /* Vergrößert um 10% */
             font-weight: bold;
-            color: #00008B; /* Dunkelblaue Akzente */
-            margin-bottom: 30px;
+            color: #00008B;
+            margin-bottom: 33px; /* Vergrößert um 10% */
         }
         .calendar-button {
             text-decoration: none;
-            background-color: #00008B; /* Dunkelblauer Button */
-            color: #ADD8E6; /* Babyblaue Schrift auf dem Button */
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #00008B;
+            color: #ADD8E6;
+            padding: 16.5px 33px; /* Vergrößert um 10% */
+            font-size: 1.32rem; /* Vergrößert um 10% */
+            border-radius: 33px; /* Vergrößert um 10% */
+            box-shadow: 0 4.4px 8.8px rgba(0, 0, 0, 0.2); /* Vergrößert um 10% */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .calendar-button:hover {
-            background-color: #000070; /* Etwas dunkleres Blau beim Hover */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background-color: #000070;
+            box-shadow: 0 6.6px 13.2px rgba(0, 0, 0, 0.3); /* Vergrößert um 10% */
         }
         footer {
             position: absolute;
-            bottom: 20px;
-            font-size: 0.9rem;
+            bottom: 22px; /* Vergrößert um 10% */
+            font-size: 0.99rem; /* Vergrößert um 10% */
             color: #00008B;
         }
     </style>
