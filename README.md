@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: 'Playfair Display', serif;
-            background-color: #faf3e0; /* Sanfte, neutrale Hintergrundfarbe */
-            color: #333;
+            background-color: #ADD8E6; /* Babyblauer Hintergrund */
+            color: #00008B; /* Dunkelblaue Schrift */
             margin: 0;
             padding: 0;
         }
@@ -20,39 +20,39 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #faf3e0; /* Cremiger Hintergrund, der an Hochzeitseinladungen erinnert */
+            background-color: #ADD8E6; /* Babyblauer Hintergrund */
             padding: 20px;
             text-align: center;
-            border: 2px solid #FFD700; /* Goldene Umrandung */
+            border: 2px solid #00008B; /* Dunkelblaue Umrandung */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Leichter Schatten für eleganten Effekt */
         }
         h1 {
             font-family: 'Great Vibes', cursive;
             font-size: 4rem;
-            color: #FFD700; /* Goldene Schrift für elegante Akzente */
+            color: #00008B; /* Dunkelblaue Schrift für elegante Akzente */
             margin: 0;
         }
         h2 {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #333;
+            color: #00008B;
             margin: 20px 0;
         }
         p {
             font-size: 1.4rem;
             margin: 20px 0;
-            color: #555;
+            color: #00008B;
         }
         .date {
             font-size: 2rem;
             font-weight: bold;
-            color: #FFD700; /* Goldene Akzente */
+            color: #00008B; /* Dunkelblaue Akzente */
             margin-bottom: 30px;
         }
         .calendar-button {
             text-decoration: none;
-            background-color: #FFD700;
-            color: #333;
+            background-color: #00008B; /* Dunkelblauer Button */
+            color: #ADD8E6; /* Babyblaue Schrift auf dem Button */
             padding: 15px 30px;
             font-size: 1.2rem;
             border-radius: 30px;
@@ -60,14 +60,14 @@
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .calendar-button:hover {
-            background-color: #f7c500;
+            background-color: #000070; /* Etwas dunkleres Blau beim Hover */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
         footer {
             position: absolute;
             bottom: 20px;
             font-size: 0.9rem;
-            color: #888;
+            color: #00008B;
         }
     </style>
 </head>
@@ -76,10 +76,9 @@
         <h1>Save the Date!</h1>
         <h2>Calvin & Iris heiraten!</h2>
         <p>Wir laden euch herzlich ein, diesen besonderen Moment mit uns zu feiern!</p>
-        <div class="date">Datum: 06. September 2025</div>
-        <p>Eine formelle Einladung und weitere Informationen folgen bald.</p>
+        <div class="date">06. September 2025</div>
         <!-- Button für Kalendereintrag -->
-        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0AUID:1234567890@example.com%0ADTSTAMP:20250906T080000Z%0AORGANIZER;CN=Calvin%20%26%20Iris:MAILTO:email@example.com%0ADTSTART:20250906T080000Z%0ADTEND:20250906T160000Z%0ASUMMARY:Calvin%20%26%20Iris%20Hochzeit%0ALOCATION:Berlin,%20Deutschland%0ADESCRIPTION:Save%20the%20Date%20f%C3%BCr%20die%20Hochzeit%20von%20Calvin%20%26%20Iris%20am%2006.%20September%202025.%0AEND:VEVENT%0AEND:VCALENDAR" class="calendar-button" download="calvin_iris_wedding.ics">Zum Kalender hinzufügen</a>
+        <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0AUID:1234567890@example.com%0ADTSTAMP:20250906T080000Z%0AORGANIZER;CN=Calvin%20%26%20Iris:MAILTO:email@example.com%0ADTSTART:20250906T080000Z%0ADTEND:20250906T160000Z%0ASUMMARY:Calvin%20%26%20Iris%20Hochzeit%0ALOCATION:Berlin,%20Deutschland%0ADESCRIPTION:Einladung%20zur%20Hochzeit%20von%20Calvin%20%26%20Iris%20am%2006.%20September%202025.%0AEND:VEVENT%0AEND:VCALENDAR" class="calendar-button" download="calvin_iris_wedding.ics">Zum Kalender hinzufügen</a>
     </div>
 
     <footer>&copy; 2025 Calvin & Iris Hochzeit</footer>
