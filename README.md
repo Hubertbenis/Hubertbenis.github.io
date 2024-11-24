@@ -97,6 +97,10 @@
         function showAdminView() {
             const adminList = document.getElementById('adminList');
             adminList.innerHTML = ""; // Reset list
+            if (database.length === 0) {
+                alert("Es wurden noch keine Namen eingetragen.");
+                return;
+            }
             database.forEach(entry => {
                 const listItem = document.createElement('li');
                 listItem.textContent = entry.name;
